@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "286847734501",
+    "firebase_url": "https://mymovies-a91ae.firebaseio.com",
+    "project_id": "mymovies-a91ae",
+    "storage_bucket": "mymovies-a91ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286847734501:android:6c209874fc2ed64f9bba0c",
+        "android_client_info": {
+          "package_name": "com.benceboldi.mymovies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286847734501-302mpqttoju2j9ce3oo3bsmuqu0c96gg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCemXaVN1cFaYK9DCBATw7kMti_v7Wjapg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286847734501-302mpqttoju2j9ce3oo3bsmuqu0c96gg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
