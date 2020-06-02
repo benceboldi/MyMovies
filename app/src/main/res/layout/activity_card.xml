@@ -17,6 +17,7 @@
             android:id="@+id/imageActId"
             android:layout_width="150dp"
             android:layout_height="250dp"
+            android:paddingBottom="15dp"
 
             />
 

@@ -3,4 +3,9 @@
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name = "flavorText">The time spent watching movies:</string>
+    <string name="directorS">Director: %1$s</string>
+    <string name="durationS">Duration: %1$s minutes</string>
+    <string name="genreS">Genre: %1$s</string>
+    <string name="languageS">Language: %1$s</string>
 </resources>

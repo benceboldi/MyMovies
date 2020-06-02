@@ -56,10 +56,10 @@ public class CardActivity extends AppCompatActivity {
                     Picasso.get().load(img).into(imageView);
                     titleView.setText(title);
                     descView.setText(description);
-                    directorView.setText(director);
-                    durationView.setText(duration);
-                    genreView.setText(genre);
-                    languageView.setText(language);
+                    directorView.setText(getString(R.string.directorS, director));
+                    durationView.setText(getString(R.string.durationS, duration));
+                    genreView.setText(getString(R.string.genreS, genre));
+                    languageView.setText(getString(R.string.languageS, language));
 
                 }
 
