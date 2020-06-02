@@ -5,10 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -38,10 +40,22 @@ public class MainActivity extends AppCompatActivity {
         options = new FirebaseRecyclerOptions.Builder<Movies>().setQuery(reference, Movies.class).build();
         adapter = new FirebaseRecyclerAdapter<Movies, MyHolder>(options) {
             @Override
-            protected void onBindViewHolder(@NonNull MyHolder holder, int position, @NonNull Movies model) {
+            protected void onBindViewHolder(@NonNull MyHolder holder, final int position, @NonNull Movies model) {
                 holder.mTitle.setText(model.getTitle());
                 Picasso.get().load(model.getImg()).into(holder.mImageView);
                 holder.mDes.setText(model.getDescription());
+
+                holder.v.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(MainActivity.this, CardActivity.class);
+                        intent.putExtra("MovieKey", getRef(position).getKey());
+                        startActivity(intent);
+                        Toast.makeText(MainActivity.this, "Clicked!", Toast.LENGTH_LONG).show();
+
+
+                    }
+                });
             }
 
             @NonNull
