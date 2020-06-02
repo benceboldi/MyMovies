@@ -2,10 +2,10 @@ package com.benceboldi.mymovies;
 
 public class Movies {
 
-    private int id;
+    private Long id;
     private String title;
     private String language;
-    private int duration;
+    private Long duration;
     private String imdb;
     private String director;
     private String genre;
@@ -15,7 +15,7 @@ public class Movies {
     public Movies() {
     }
 
-    public Movies(int id, String title, String language, int duration, String imdb, String director, String genre, String description, String img) {
+    public Movies(Long id, String title, String language, Long duration, String imdb, String director, String genre, String description, String img) {
         this.id = id;
         this.title = title;
         this.language = language;
@@ -27,7 +27,7 @@ public class Movies {
         this.img = img;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
@@ -39,7 +39,7 @@ public class Movies {
         return language;
     }
 
-    public int getDuration() {
+    public Long getDuration() {
         return duration;
     }
 

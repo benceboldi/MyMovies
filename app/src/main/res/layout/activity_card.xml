@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imageActId"
+            android:layout_width="150dp"
+            android:layout_height="250dp"
+
+            />
+
+        <TextView
+            android:id="@+id/titleActId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/imageActId"
+            android:layout_toRightOf="@id/imageActId"
+            android:textColor="@color/blackColor"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/descActId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/titleActId"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toEndOf="@id/imageActId"
+            android:layout_toRightOf="@id/imageActId"
+            android:textColor="@color/lightGrayColor"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/directorId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageActId"
+            android:textColor="@color/lightGrayColor"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/durationId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/directorId"
+            android:textColor="@color/lightGrayColor"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/genreId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/durationId"
+            android:textColor="@color/lightGrayColor"
+            android:textSize="20sp"
+            />
+        <TextView
+            android:id="@+id/languageId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/genreId"
+            android:textColor="@color/lightGrayColor"
+            android:textSize="20sp"
+             />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAdd"
+            android:text="Add"
+            android:layout_below="@id/languageId"
+            android:textColor="@android:color/darker_gray"
+            android:background="@drawable/btn"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
