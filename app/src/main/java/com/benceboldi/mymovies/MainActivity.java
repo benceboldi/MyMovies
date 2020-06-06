@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -19,13 +20,17 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
+    public static float userTime = 0;
     private DatabaseReference reference;
     private RecyclerView recyclerView;
 
     private FirebaseRecyclerOptions<Movies> options;
     private FirebaseRecyclerAdapter<Movies, MyHolder> adapter;
+    TextView userTimeView;
 
     Dialog myDialog;
 
@@ -78,11 +83,19 @@ public class MainActivity extends AppCompatActivity {
         adapter.startListening();
         recyclerView.setAdapter(adapter);
 
-        //Feldobja az activity_poput-ot, ha rálépünk a FAB-ra
+        //Feldobja az activity_poput-ot, ha rálépünk a FAB-ra, majd kiszámolja a filmnézéssel töltött időt
+        myDialog.setContentView(R.layout.activity_popup);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                myDialog.setContentView(R.layout.activity_popup);
+                float days, hours;
+                days = userTime / 60 / 24;
+                hours = userTime / 60;
+                String fDays = String.format(Locale.ENGLISH,"%.2f", days);
+                String fHours = String.format(Locale.ENGLISH,"%.2f", hours);
+
+                userTimeView = myDialog.findViewById(R.id.userTimeId);
+                userTimeView.setText(getString(R.string.time, fHours, fDays));
                 myDialog.show();
             }
         });

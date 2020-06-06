@@ -4,9 +4,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -17,6 +19,7 @@ import com.squareup.picasso.Picasso;
 
 public class CardActivity extends AppCompatActivity {
 
+    private float addedDur;
     private ImageView imageView;
     TextView titleView, descView, directorView, durationView, genreView, languageView;
     Button btnAdd;
@@ -55,6 +58,8 @@ public class CardActivity extends AppCompatActivity {
                     String genre = dataSnapshot.child("genre").getValue().toString();
                     String language = dataSnapshot.child("language").getValue().toString();
 
+                    addedDur = Integer.parseInt(duration);
+
                     // res/values/strings.xml-ben találhatóak a flavor textek
                     Picasso.get().load(img).into(imageView);
                     titleView.setText(title);
@@ -71,6 +76,14 @@ public class CardActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
 
+            }
+        });
+        //Hozzáadjuk az adott film idejét a userTime-hoz, mikor rálépünk az Add gombra
+        btnAdd.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MainActivity.userTime += addedDur;
+                Toast.makeText(CardActivity.this, "Movie added, check your profile for stats!", Toast.LENGTH_LONG).show();
             }
         });
 

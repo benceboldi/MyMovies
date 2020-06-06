@@ -9,4 +9,5 @@
     <string name="genreS">Genre: %1$s</string>
     <string name="languageS">Language: %1$s</string>
     <string name="add">Add</string>
+    <string name="time">%1$s hours or %2$s days</string>
 </resources>

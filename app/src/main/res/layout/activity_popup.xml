@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="300dp"
+    android:layout_width="355dp"
     android:layout_height="250dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="3dp"
@@ -22,6 +22,7 @@
             android:id="@+id/profileImage"
             android:src="@drawable/profile"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
 
             />
         <TextView
@@ -33,13 +34,14 @@
             android:layout_below="@id/profileImage"
             android:text="@string/flavorText"
             android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="32sp"
+            android:textSize="30sp"
             android:textColor="@color/lightGrayColor"
-            android:id="@+id/userDurationId"
+            android:id="@+id/userTimeId"
             android:layout_below="@id/flavorText"
             android:layout_centerHorizontal="true"
             />
