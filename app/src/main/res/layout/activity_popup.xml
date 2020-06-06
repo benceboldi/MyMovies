@@ -7,6 +7,7 @@
     app:cardElevation="3dp"
     app:cardUseCompatPadding="true"
     android:layout_gravity="center"
+    app:layout_constraintCircleRadius="6dp"
     >
 
     <RelativeLayout
@@ -31,6 +32,7 @@
             android:id="@+id/flavorText"
             android:layout_below="@id/profileImage"
             android:text="@string/flavorText"
+            android:layout_centerHorizontal="true"
             />
         <TextView
             android:layout_width="wrap_content"

@@ -38,12 +38,14 @@ public class CardActivity extends AppCompatActivity {
 
         reference = FirebaseDatabase.getInstance().getReference();
 
+        //MovieKey a rálépett filmnek az azonosítója
         String MovieKey = getIntent().getStringExtra("MovieKey");
 
         reference.child(MovieKey).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
+                //Ha léteznek adatok az adatbázisban, akkor kiszedjük az összes szükséges mezőt, majd beállítjuk őket
                 if (dataSnapshot.exists()){
                     String img = dataSnapshot.child("img").getValue().toString();
                     String title = dataSnapshot.child("title").getValue().toString();
@@ -53,6 +55,7 @@ public class CardActivity extends AppCompatActivity {
                     String genre = dataSnapshot.child("genre").getValue().toString();
                     String language = dataSnapshot.child("language").getValue().toString();
 
+                    // res/values/strings.xml-ben találhatóak a flavor textek
                     Picasso.get().load(img).into(imageView);
                     titleView.setText(title);
                     descView.setText(description);

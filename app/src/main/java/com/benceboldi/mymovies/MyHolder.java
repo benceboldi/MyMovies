@@ -16,7 +16,7 @@ public class MyHolder extends RecyclerView.ViewHolder {
 
     public MyHolder(@NonNull View itemView){
         super(itemView);
-
+        //Hozzárendeljük id alapján az adott mezőket a holderhez
         mImageView = itemView.findViewById(R.id.imageId);
         mTitle = itemView.findViewById(R.id.titleId);
         mDes = itemView.findViewById(R.id.descId);
