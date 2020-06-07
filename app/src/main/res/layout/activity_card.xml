@@ -45,7 +45,7 @@
             android:layout_toEndOf="@id/imageActId"
             android:layout_toRightOf="@id/imageActId"
             android:textColor="@color/lightGrayColor"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/directorId"
@@ -54,7 +54,7 @@
             android:layout_below="@id/imageActId"
             android:layout_marginTop="10dp"
             android:textColor="@color/lightGrayColor"
-            android:textSize="20sp"
+            android:textSize="18sp"
             />
         <TextView
             android:id="@+id/durationId"
@@ -62,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/directorId"
             android:textColor="@color/lightGrayColor"
-            android:textSize="20sp"
+            android:textSize="18sp"
             />
         <TextView
             android:id="@+id/genreId"
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/durationId"
             android:textColor="@color/lightGrayColor"
-            android:textSize="20sp"
+            android:textSize="18sp"
             />
         <TextView
             android:id="@+id/languageId"
@@ -89,7 +89,7 @@
             android:layout_below="@id/languageId"
             android:textColor="@android:color/white"
             android:background="@drawable/btn"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
             />
     </RelativeLayout>

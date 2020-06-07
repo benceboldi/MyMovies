@@ -24,6 +24,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    //TODO perszisztens userTime
     public static float userTime = 0;
     private DatabaseReference reference;
     private RecyclerView recyclerView;
